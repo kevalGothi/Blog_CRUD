@@ -1,0 +1,194 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  color: blue;
+  margin-bottom: 20px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+hr {
+  display: none;
+  width: 100%;
+  border: 1px solid black;
+}
+main {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 10px;
+}
+div {
+  display: flex;
+  flex: 25%;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border: 2px black solid;
+  border-radius: 50px;
+  padding: 20px;
+  gap: 5px;
+  text-transform: capitalize;
+  width: 25em;
+  height: max-content;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.forms-container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: absolute;
+  background-color: #58554761;
+}
+
+.form {
+  width: 50%;
+  height: max-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 5%;
+  right: 28%;
+  font-size: 24px;
+  cursor: pointer;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+.form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: arial, bold;
+}
+form input,
+form button {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  width: 100%;
+}
+textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  width: 100%;
+  resize: none;
+}
+button {
+  background-color: rgb(31, 148, 180);
+  color: rgb(4, 4, 4);
+  font-weight: bold;
+  width: 100%;
+  border: 2px solid black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.btn {
+  background-color: rgb(31, 148, 180);
+  color: rgb(4, 4, 4);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: transparent;
+  border: none;
+}
+span {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+@media (max-width: 480px) {
+  body {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  div {
+    flex: 100%;
+  }
+  span {
+    flex-direction: column;
+  }
+  hr {
+    display: flex;
+    width: 50%;
+    border-top: 1px solid black;
+    align-content: center;
+    align-self: center;
+    border-radius: 50%;
+    padding: inherit;
+    margin-bottom: auto;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  main {
+    justify-content: center;
+    gap: 0px;
+    margin-bottom: auto;
+  }
+}
