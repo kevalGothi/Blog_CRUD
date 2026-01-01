@@ -1,5 +1,5 @@
 
-# BLOD using experess and ejs 
+# BLOG using experess and ejs 
 
 
 This Project is made using experess And Ejs 
