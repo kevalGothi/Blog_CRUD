@@ -8,9 +8,9 @@
   </head>
   <body>
     <div>
-      <button><a href="/posts">Back to Posts</a></button>
+      <button><a href="/api/posts">Back to Posts</a></button>
       <h1>Edit Post</h1>
-      <form action="/post/edit/<%= post.id %>" method="POST">
+      <form action="/api/post/edit/<%= post.id %>" method="POST">
         <input type="text" name="title" value="<%= post.title %>" required />
         <br />
         <textarea name="desc" cols="30" rows="10" required>

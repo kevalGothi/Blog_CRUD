@@ -16,13 +16,13 @@
         <p><%= post.desc.substring(0, 10) %>....</p>
         <p>Author: <%= post.author %></p>
         <span>
-          <a href="/post/<%= post.id %>">
+          <a href="/api/post/<%= post.id %>">
             <button>Read More</button>
           </a>
           <form
             method="POST"
             class="buttons"
-            action="/post/<%= post.id %>?_method=DELETE"
+            action="/api/post/<%= post.id %>?_method=DELETE"
           >
             <button type="submit">Delete</button>
           </form>
@@ -38,7 +38,7 @@
       <div class="form">
         <span class="close" onclick="form.style.display='none'">X</span>
         <h2>Add a new post</h2>
-        <form action="/posts" method="POST">
+        <form action="/api/posts" method="POST">
           <input type="text" name="title" placeholder="Title" required />
           <br />
           <textarea
