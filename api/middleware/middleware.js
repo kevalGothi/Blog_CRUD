@@ -1,5 +1,4 @@
 import jwt from "jsonwebtoken";
-import express from "express";
 import { LocalStorage } from "node-localstorage";
 
 let localStorage = new LocalStorage("./scratch");
@@ -8,24 +7,30 @@ const JWT_SECERET = "kevalisking";
 let users = [];
 try {
   if (localStorage.getItem("users")) {
-    const raw = localStorage.getItem("users") || "[]";
-    users = JSON.parse(raw);
+    users = JSON.parse(localStorage.getItem("users"));
   }
 } catch (err) {
   users = [];
 }
 
 async function authMiddleware(req, res, next) {
-  const newtoken = req.headers;
-  console.log(newtoken);
-  let ourToken = await jwt.decode(newtoken, JWT_SECERET);
-  console.log(ourToken);
+  // Frontend will send token in a header called 'x-auth-token' or 'authorization'
+  const token = req.headers["x-auth-token"];
 
-  let pass = users.find((u) => u.username === ourToken);
-  if (pass) {
-    next();
-  } else {
-    res.status(502).send("Invalid user request");
+  if (!token) return res.status(401).json({ message: "No token provided" });
+
+  try {
+    const decoded = jwt.verify(token, JWT_SECERET); // Use verify, not decode
+    // Check if user exists
+    const user = users.find((u) => u.username === decoded);
+    if (user) {
+      req.user = user;
+      next();
+    } else {
+      res.status(401).json({ message: "Invalid User" });
+    }
+  } catch (err) {
+    res.status(400).json({ message: "Invalid Token" });
   }
 }
 

@@ -4,9 +4,12 @@ import postRouter from "./router/posts.route.js";
 import authRouter from "./router/auth.route.js";
 import jwt from "jsonwebtoken";
 import authMiddleware from "./middleware/middleware.js";
+import cors from "cors";
 
 const app = express();
-const port = 3000;
+const port = 3030;
+
+app.use(cors());
 
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: true }));

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "8943dd28-82c2-4ee4-a136-7d33e1eb1a3e",
+    "username": "keval",
+    "email": "keval@patel.com",
+    "password": "$2a$10$G6d7oGyK9nJqUyomLAC/ruRCN8SnnOljLP1RGl/roGnR53zfCA9g.",
+    "createdAt": "2026-01-08T07:08:07.282Z"
+  },
+  {
+    "id": "ac44db17-df38-4900-bf78-eab80c337148",
+    "username": "i am good ",
+    "email": "kls@lgs.cms",
+    "password": "$2a$10$uXLbWbM34ZehBlW9n57b3uIKwQnkCNXv6OP6HDu1Rm1DAIrL6kHm6",
+    "createdAt": "2026-01-08T07:10:22.366Z"
+  }
+]
