@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import MDEditor from '@uiw/react-md-editor';
 import api from '../api';
 import { useAuth } from '../context/AuthContext';
+import Comments from '../components/Comments';
 
 const PostDetail = () => {
     const { id } = useParams();
@@ -113,6 +114,10 @@ const PostDetail = () => {
                         </p>
                     </div>
                 </div>
+            </div>
+
+            <div className="mt-12">
+                <Comments postId={id} />
             </div>
         </div>
     );

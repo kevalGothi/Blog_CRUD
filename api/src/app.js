@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import authRoutes from './routes/auth.routes.js';
 import postRoutes from './routes/post.routes.js';
+import commentRoutes from './routes/comment.routes.js';
 import { errorHandler } from './middleware/error.middleware.js';
 
 const app = express();
@@ -21,6 +22,7 @@ if (process.env.NODE_ENV === 'development') {
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
+app.use('/api/posts/:postId/comments', commentRoutes);
 
 // Health check
 app.get('/health', (req, res) => {
