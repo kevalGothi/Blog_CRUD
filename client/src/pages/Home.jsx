@@ -67,7 +67,7 @@ const Home = () => {
                                         <h2 className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors line-clamp-2 leading-tight">{post.title}</h2>
                                     </Link>
                                     <p className="mt-3 text-base text-slate-500 line-clamp-3 leading-relaxed">
-                                        {post.desc.substring(0, 100)}...
+                                        
                                     </p>
                                 </div>
 
