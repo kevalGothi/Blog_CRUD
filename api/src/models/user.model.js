@@ -19,14 +19,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please add a password'],
         minlength: 6,
-        select: true, // we need password for login
+        select: true, 
     },
 }, {
     timestamps: true,
 });
 
-// Alias 'id' to '_id' for frontend compatibility if needed, 
-// though standard Mongoose uses _id. We'll adjust the controller response.
+
 userSchema.virtual('id').get(function () {
     return this._id.toHexString();
 });
