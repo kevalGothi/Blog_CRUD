@@ -1,7 +1,7 @@
 # 📝 BlogPlus — MERN Blog Platform
 
 🔗 **Live Client:** https://blogplus-by-keval.vercel.app  
-🔗 **Backend API:** https://blog-crud-etxp.onrender.com  
+🔗 **Backend API:** On Render  
 
 ---
 
@@ -135,6 +135,7 @@ Modern development tools were used to improve productivity, while all architectu
 MCA Student | Full-Stack Developer
 
 LinkedIn: [https://linkedin.com/in/kevalgothi](https://linkedin.com/in/kevalgothi)
+
 
 
 
